@@ -1,0 +1,186 @@
+<!--
+    Generar SVG para los bordes 
+
+    https://www.shapedivider.app/ 
+
+    https://app.haikei.app/
+
+    Video del tutorial
+
+    https://www.youtube.com/watch?v=lPJVi797Uy0
+ -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            background-color: #202731;
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 400px;
+            padding: 100px 20vw;
+        }
+
+        .blue {
+            background: #3c31dd;
+        }
+
+        .red {
+            background: #dd3f31;
+        }
+
+        .pink {
+            background: #ff0066;
+        }
+
+        .dark {
+            background: #0f0f10;
+        }
+
+        .curve {
+            position: absolute;
+            height: 225px;
+            width: 100;
+            bottom: 0;
+        }
+
+        .curve::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #202731;
+            transform: translate(85%, 60%);
+        }
+
+        .curve::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: #3c31dd;
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+        .wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .wave svg {
+            position: relative;
+            display: block;
+            width: calc(269% + 1.3px);
+            height: 79px;
+        }
+
+        .wave .shape-fill {
+            fill: #202731;
+        }
+
+        .spacer {
+            aspect-ratio: 960/300;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .layer1 {
+            background-image: url('./layered-waves-haikei.svg');
+        }
+
+        .flip {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="blue">
+        <h1>Nice Curves</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae minus animi itaque temporibus reiciendis
+            veniam voluptatibus at, blanditiis quia eum dolor est fugit nihil velit omnis deserunt. Dignissimos,
+            inventore ex!</p>
+        <div class="curve"></div>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Molestiae culpa incidunt asperiores distinctio veniam nemo atque? Ad debitis molestias odio nostrum
+            reprehenderit libero quasi incidunt dicta perspiciatis vitae quos accusantium, molestiae, praesentium
+            corrupti? Itaque rerum rem ex earum?</p>
+    </section>
+    <section class="red">
+        <h1>Nice Curves</h1>
+        <p>Placeat unde inventore impedit harum assumenda rem id, cupiditate eveniet saepe nihil, blanditiis sapiente
+            dolore. Velit necessitatibus enim, eveniet labore error reiciendis, iste, provident adipisci in consequuntur
+            natus ullam eos.
+        </p>
+        <div class="wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Cumque fugiat nisi, tempora necessitatibus amet asperiores aperiam nemo at mollitia suscipit officia minus
+            dolorem placeat tenetur inventore porro ut? Quisquam natus esse velit ipsum aspernatur deserunt commodi
+            dolorem autem.</p>
+    </section>
+    <div class="spacer layer1 flip"></div>
+    <section style="background-color: #fa7268;">
+        <h1>Nice Curves</h1>
+        <p>Ut adipisci hic minus nisi nihil iste blanditiis culpa praesentium ab officiis, dolorem nam iusto, quidem
+            exercitationem consequuntur fuga quia commodi dignissimos necessitatibus nulla quod qui eum doloremque?
+            Odit, temporibus?</p>
+    </section>
+    <div class="spacer layer1"></div>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Excepturi fugiat accusantium consequatur fugit nobis consectetur rem voluptates, deserunt maxime cum
+            laboriosam eos et vero aperiam quod aliquam porro esse laborum dicta magnam recusandae architecto? Officiis
+            perferendis iusto hic.</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Quidem hic et quae molestias, accusantium ad voluptate in maxime eum ipsum reiciendis similique unde
+            consequuntur, eos, totam nihil commodi labore nostrum quos tempore? Ipsum, velit. Dolores, blanditiis
+            praesentium? Provident!</p>
+    </section>
+    <section>
+        <h1>Nice Curves</h1>
+        <p>Illum voluptates vero earum sunt architecto similique aut quasi nisi voluptas et qui non velit, officia sequi
+            voluptatem, repudiandae ipsa quos, quibusdam sed dolorem eum quisquam! Rem illo praesentium inventore.</p>
+    </section>
+</body>
+
+</html>
